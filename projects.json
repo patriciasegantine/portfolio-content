@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "nexus-dashboard",
+    "title": "Nexus Dashboard",
+    "category": "SaaS Dashboard",
+    "description": "Task management dashboard focused on planning clarity, productivity, and team visibility.",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/nexus-dashboard-frontend/main/public/screenshot.png",
+    "stackPreview": ["Next.js", "TypeScript", "Tailwind CSS", "React Query"],
+    "status": "In Progress",
+    "featured": true,
+    "technologies": [
+      { "icon": "SiNextdotjs", "name": "Next.js" },
+      { "icon": "SiTypescript", "name": "TypeScript" },
+      { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
+      { "icon": "SiReactquery", "name": "React Query" },
+      { "icon": "SiZod", "name": "Zod" }
+    ],
+    "links": {
+      "github": "https://github.com/patriciasegantine/nexus-dashboard-frontend",
+      "liveDemo": "https://ps-nexus-dashboard.vercel.app"
+    },
+    "caseStudy": {
+      "projectOverview": "Nexus Dashboard is a SaaS-style task management interface built to help users plan work, track deadlines, and keep team priorities visible in one place.",
+      "problemPurpose": "Many task tools become noisy as projects grow. I wanted to build a cleaner dashboard that keeps critical information visible and reduces friction in day-to-day planning.",
+      "myFocus": [
+        "Designing a maintainable front-end architecture for a growing product",
+        "Creating fast task interactions with clear loading and validation states",
+        "Keeping the interface readable and accessible across devices"
+      ],
+      "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "React Query", "Zod"],
+      "whyThisStack": [
+        "Next.js supports a scalable routing and rendering model for SaaS-style products",
+        "TypeScript helps keep shared data models safe as features expand",
+        "React Query improves server-state handling and caching for dashboard workflows",
+        "Zod makes form and API input validation explicit and predictable"
+      ],
+      "keyFeatures": [
+        "Responsive dashboard layout",
+        "User authentication and protected routes",
+        "Loading and error states for smoother task workflows",
+        "Dark and light theme support"
+      ],
+      "challengesTradeoffs": [
+        "Balancing flexibility with UI simplicity as feature scope grows",
+        "Choosing where to optimise early versus waiting for real usage patterns",
+        "Keeping components reusable without over-engineering abstractions"
+      ],
+      "whatILearned": [
+        "A stable data model early on reduces refactor cost later",
+        "Performance and clarity are closely connected: less visual noise improves perceived speed",
+        "Consistent UX patterns matter more than adding many isolated features"
+      ],
+      "nextSteps": [
+        "Expand task planning workflows and data visualisation",
+        "Improve coverage for critical state transitions and user flows",
+        "Refine product-level features as the project evolves"
+      ]
+    }
+  },
+  {
+    "slug": "the-no-manual-life",
+    "title": "The No-Manual Life",
+    "category": "Accessibility Project",
+    "description": "Accessibility-focused blog translating UI and a11y decisions into practical front-end guidance.",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/public/assets/images/logo-dark.svg",
+    "stackPreview": ["Next.js", "TypeScript", "MDX", "Tailwind CSS"],
+    "status": "In Progress",
+    "featured": true,
+    "technologies": [
+      { "icon": "SiNextdotjs", "name": "Next.js" },
+      { "icon": "SiTypescript", "name": "TypeScript" },
+      { "icon": "SiTailwindcss", "name": "Tailwind CSS" }
+    ],
+    "links": {
+      "github": "https://github.com/patriciasegantine/a11y-blog-project",
+      "liveDemo": "https://the-no-manual-life-blog.vercel.app"
+    },
+    "caseStudy": {
+      "projectOverview": "The No-Manual Life is an accessibility-focused blog where I break down front-end decisions into practical, product-ready guidance.",
+      "problemPurpose": "A lot of accessibility content is either too basic or too abstract. This project translates accessibility principles into implementation patterns teams can apply more easily in real products.",
+      "myFocus": [
+        "Writing clear case-style articles based on real implementation decisions",
+        "Building a content structure that is easy to scan and navigate",
+        "Applying inclusive defaults in typography, semantics, and interaction states"
+      ],
+      "techStack": ["Next.js", "TypeScript", "MDX", "Tailwind CSS", "axe-core", "Lighthouse"],
+      "whyThisStack": [
+        "MDX supports scalable, component-driven technical writing",
+        "Next.js keeps routing and content delivery simple for a growing publication",
+        "Tailwind CSS helps create consistent and accessible UI patterns quickly",
+        "axe-core and Lighthouse support accessibility validation during development"
+      ],
+      "keyFeatures": [
+        "Semantic page structure and keyboard-friendly navigation",
+        "Accessibility-first implementation patterns",
+        "Reusable content structure for technical writing",
+        "Progressive enhancement and performance-aware front-end choices"
+      ],
+      "challengesTradeoffs": [
+        "Balancing writing depth with readability for different audiences",
+        "Keeping content production consistent while maintaining structural quality",
+        "Choosing how much design polish to add without slowing publishing"
+      ],
+      "whatILearned": [
+        "Technical storytelling gets stronger when examples are tied to product outcomes",
+        "Clear content information architecture makes expertise more visible",
+        "Accessibility discussions are more useful when connected to delivery constraints"
+      ],
+      "nextSteps": [
+        "Publish structured series on forms, navigation, and performance",
+        "Add lightweight search and filtering by topic",
+        "Expand the project as both a learning laboratory and a professional showcase"
+      ]
+    }
+  },
+  {
+    "slug": "brev-ly",
+    "title": "Brev.ly",
+    "category": "Full-stack Product",
+    "description": "URL shortener project focused on lightweight UX, clear validation, and scalable product foundations.",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/client/src/assets/dark_app.png",
+    "stackPreview": ["React", "TypeScript", "Node.js", "Zod"],
+    "status": "In Progress",
+    "featured": false,
+    "technologies": [
+      { "icon": "SiReact", "name": "React" },
+      { "icon": "SiTypescript", "name": "TypeScript" },
+      { "icon": "SiNodedotjs", "name": "Node.js" },
+      { "icon": "SiZod", "name": "Zod" }
+    ],
+    "links": {
+      "github": "https://github.com/patriciasegantine/Brev.ly"
+    },
+    "caseStudy": {
+      "projectOverview": "Brev.ly is a URL shortener project built around a lightweight interface and a simple full-stack structure with separate client and server applications.",
+      "problemPurpose": "Link tools are often either too basic or overloaded with features. The goal here is to provide an efficient core experience first, with room to scale later.",
+      "myFocus": [
+        "Defining a clean short-link creation and management flow",
+        "Exploring validation and feedback patterns for fast interactions",
+        "Structuring the project in a way that can support future growth"
+      ],
+      "techStack": ["React", "TypeScript", "Node.js", "Zod"],
+      "whyThisStack": [
+        "React and TypeScript keep UI behaviour predictable and easy to evolve",
+        "Node.js fits a lightweight API flow for link generation and redirects",
+        "Zod helps enforce clear input contracts across client and server boundaries"
+      ],
+      "keyFeatures": [
+        "Client and server split for clearer project structure",
+        "Short-link creation flow",
+        "Validation-focused product foundations"
+      ],
+      "challengesTradeoffs": [
+        "Choosing the right MVP scope before adding advanced features",
+        "Balancing simplicity with future extensibility",
+        "Structuring the project clearly while it is still evolving"
+      ],
+      "whatILearned": [
+        "MVP definitions should protect delivery speed and product clarity",
+        "Validation strategy has a strong effect on perceived reliability",
+        "Foundational architecture decisions should support iteration, not perfection"
+      ],
+      "nextSteps": [
+        "Build the first complete end-to-end flow for link creation and redirect",
+        "Add clearer project documentation and live demo support",
+        "Expand the product only after the core experience feels solid"
+      ]
+    }
+  }
+]

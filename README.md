@@ -15,7 +15,7 @@ It currently includes project data for the Projects section and project detail p
 The goal of this repository is to make portfolio content easier to maintain independently from the main codebase.
 
 ```plain
-patriciasegantine-portfolio-content/
+portfolio-content/
   ├── projects.json
   ├── hero.json
   ├── about.json

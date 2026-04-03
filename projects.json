@@ -62,7 +62,7 @@
     "title": "The No-Manual Life",
     "category": "Accessibility Project",
     "description": "Accessibility-focused blog translating UI and a11y decisions into practical front-end guidance.",
-    "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/public/assets/images/logo-dark.svg",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/public/assets/images/blog.png",
     "stackPreview": ["Next.js", "TypeScript", "MDX", "Tailwind CSS"],
     "status": "In Progress",
     "featured": true,

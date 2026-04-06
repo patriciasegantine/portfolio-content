@@ -4,7 +4,7 @@
     "title": "Nexus Dashboard",
     "category": "SaaS Dashboard",
     "description": "Task management dashboard focused on planning clarity, productivity, and team visibility.",
-    "image": "https://raw.githubusercontent.com/patriciasegantine/nexus-dashboard-frontend/main/public/screenshot.png",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/nexus-dashboard-frontend/main/public/preview.png",
     "stackPreview": ["Next.js", "TypeScript", "Tailwind CSS", "React Query"],
     "status": "In Progress",
     "featured": true,
@@ -62,7 +62,7 @@
     "title": "The No-Manual Life",
     "category": "Accessibility Project",
     "description": "Accessibility-focused blog translating UI and a11y decisions into practical front-end guidance.",
-    "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/public/assets/images/blog.png",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/public/preview.png",
     "stackPreview": ["Next.js", "TypeScript", "MDX", "Tailwind CSS"],
     "status": "In Progress",
     "featured": true,
@@ -118,7 +118,7 @@
     "title": "Brev.ly",
     "category": "Full-stack Product",
     "description": "URL shortener project focused on lightweight UX, clear validation, and scalable product foundations.",
-    "image": "https://raw.githubusercontent.com/patriciasegantine/Brev.ly/main/client/src/assets/dark_app.png",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/Brev.ly/main/client/public/preview.png",
     "stackPreview": ["React", "TypeScript", "Node.js", "Zod"],
     "status": "In Progress",
     "featured": false,
@@ -166,5 +166,71 @@
         "Expand the product only after the core experience feels solid"
       ]
     }
+  },
+  {
+  "slug": "widget-upload",
+  "title": "Widget Upload",
+  "category": "Full-stack Product",
+  "description": "File upload interface focused on feedback, validation, and a smooth production-like user experience.",
+  "image": "https://raw.githubusercontent.com/patriciasegantine/ftr-upload-client/main/public/preview.png",
+  "stackPreview": ["React", "TypeScript", "Zustand", "Tailwind CSS"],
+  "status": "In Progress",
+  "featured": false,
+  "technologies": [
+    { "icon": "SiReact", "name": "React" },
+    { "icon": "SiTypescript", "name": "TypeScript" },
+    { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
+    { "icon": "SiZod", "name": "Zod" }
+  ],
+  "links": {
+    "github": "https://github.com/patriciasegantine/ftr-upload-client"
+  },
+  "caseStudy": {
+    "projectOverview": "Upload Widget Client is a front-end file upload interface built to provide a clear, fast, and accessible experience when interacting with upload APIs.",
+    "problemPurpose": "File upload flows often seem simple until validation, progress feedback, and error handling need to work together cleanly. This project focuses on turning that interaction into a more polished, production-like experience.",
+    "myFocus": [
+      "Designing a clear upload flow with strong feedback and error states",
+      "Building a scalable component structure for real product-like interactions",
+      "Keeping the experience accessible, responsive, and easy to maintain"
+    ],
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "Radix UI",
+      "Motion",
+      "React Dropzone",
+      "Vitest",
+      "React Testing Library"
+    ],
+    "whyThisStack": [
+      "React and TypeScript support a predictable and maintainable UI architecture",
+      "Zustand keeps state management lightweight for interactive upload flows",
+      "Radix UI helps reinforce accessible interaction patterns",
+      "Motion improves feedback and transition quality without overcomplicating the UI"
+    ],
+    "keyFeatures": [
+      "Drag and drop file upload",
+      "Real-time upload progress feedback",
+      "Validation and error handling for invalid formats",
+      "Responsive and accessible interface design"
+    ],
+    "challengesTradeoffs": [
+      "Balancing smooth UX feedback with implementation simplicity",
+      "Handling validation and upload states without creating noisy UI behaviour",
+      "Keeping the architecture reusable while the product is still evolving"
+    ],
+    "whatILearned": [
+      "Upload flows require careful state design to feel reliable",
+      "Good feedback patterns improve perceived quality as much as visual polish",
+      "Accessibility matters even more in interaction-heavy components"
+    ],
+    "nextSteps": [
+      "Finish the remaining polish and integration details",
+      "Strengthen end-to-end flow between client and upload service",
+      "Expand testing coverage for critical upload states and edge cases"
+    ]
   }
+}
 ]

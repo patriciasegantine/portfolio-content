@@ -118,7 +118,7 @@
     "title": "Brev.ly",
     "category": "Full-stack Product",
     "description": "URL shortener project focused on lightweight UX, clear validation, and scalable product foundations.",
-    "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/client/src/assets/dark_app.png",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/Brev.ly/main/client/src/assets/dark_app.png",
     "stackPreview": ["React", "TypeScript", "Node.js", "Zod"],
     "status": "In Progress",
     "featured": false,

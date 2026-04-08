@@ -122,7 +122,7 @@
     "stackPreview": ["React", "TypeScript", "Node.js", "Vite", "Zod"],
     "status": "In Progress",
     "featured": false,
-    "technologies": [ß
+    "technologies": [
       { "icon": "SiReact", "name": "React" },
       { "icon": "SiVite", "name": "Vite" },
       { "icon": "SiTypescript", "name": "TypeScript" },

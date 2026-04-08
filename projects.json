@@ -119,16 +119,14 @@
     "category": "Full-stack Product",
     "description": "URL shortener project focused on lightweight UX, clear validation, and scalable product foundations.",
     "image": "https://raw.githubusercontent.com/patriciasegantine/Brev.ly/main/client/public/preview.png",
-    "stackPreview": ["React", "TypeScript", "Node.js", "Vite", "Zod"],
+    "stackPreview": ["React", "TypeScript", "Node.js", "Zod"],
     "status": "In Progress",
     "featured": false,
     "technologies": [
       { "icon": "SiReact", "name": "React" },
-      { "icon": "SiVite", "name": "Vite" },
       { "icon": "SiTypescript", "name": "TypeScript" },
       { "icon": "SiNodedotjs", "name": "Node.js" },
-      { "icon": "SiZod", "name": "Zod" },
-      
+      { "icon": "SiZod", "name": "Zod" }
     ],
     "links": {
       "github": "https://github.com/patriciasegantine/Brev.ly"
@@ -175,12 +173,11 @@
   "category": "Full-stack Product",
   "description": "File upload interface focused on feedback, validation, and a smooth production-like user experience.",
   "image": "https://raw.githubusercontent.com/patriciasegantine/ftr-upload-client/main/public/preview.png",
-  "stackPreview": ["React", "TypeScript", "Vite", "Zustand"],
+  "stackPreview": ["React", "TypeScript", "Zustand", "Tailwind CSS"],
   "status": "In Progress",
   "featured": false,
   "technologies": [
     { "icon": "SiReact", "name": "React" },
-    { "icon": "SiVite", "name": "Vite" },
     { "icon": "SiTypescript", "name": "TypeScript" },
     { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
     { "icon": "SiZod", "name": "Zod" }

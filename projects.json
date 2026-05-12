@@ -3,7 +3,7 @@
     "slug": "nexus-dashboard",
     "title": "Nexus Dashboard",
     "category": "SaaS Dashboard",
-    "description": "Task management dashboard focused on planning clarity, productivity, and team visibility.",
+    "description": "Analytics dashboard focused on data visualisation, productivity metrics, and scalable frontend architecture.",
     "image": "https://raw.githubusercontent.com/patriciasegantine/nexus-dashboard-frontend/main/public/preview.png",
     "stackPreview": ["Next.js", "TypeScript", "Tailwind CSS", "React Query"],
     "status": "In Progress",
@@ -16,100 +16,46 @@
       { "icon": "SiZod", "name": "Zod" }
     ],
     "links": {
-      "github": "https://github.com/patriciasegantine/nexus-dashboard-frontend",
+      "github": "https://github.com/patriciasegantine/nexus-dashboard",
       "liveDemo": "https://ps-nexus-dashboard.vercel.app"
     },
     "caseStudy": {
-      "projectOverview": "Nexus Dashboard is a SaaS-style task management interface built to help users plan work, track deadlines, and keep team priorities visible in one place.",
-      "problemPurpose": "Many task tools become noisy as projects grow. I wanted to build a cleaner dashboard that keeps critical information visible and reduces friction in day-to-day planning.",
+      "projectOverview": "Nexus Dashboard is an analytics dashboard built to explore data visualisation, scalable component architecture, and fullstack development with Next.js. The frontend is live — the backend is being rebuilt using Next.js API Routes with PostgreSQL via Neon and Drizzle ORM, replacing a separate server to simplify the stack and enable a single Vercel deploy.",
+      "problemPurpose": "Many dashboard projects focus on visual polish without addressing the underlying data architecture. This project explores how to build a frontend that remains maintainable as data complexity grows — with clear state management, reliable loading patterns, and a component structure that scales.",
       "myFocus": [
-        "Designing a maintainable front-end architecture for a growing product",
-        "Creating fast task interactions with clear loading and validation states",
-        "Keeping the interface readable and accessible across devices"
+        "Building a scalable and maintainable component architecture for a data-heavy UI",
+        "Implementing JWT authentication with access tokens, refresh token flow, and protected routes",
+        "Designing clear loading, error, and empty states across dashboard views",
+        "Migrating the backend to Next.js API Routes to simplify the stack and reduce infrastructure overhead"
       ],
-      "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "React Query", "Zod"],
+      "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "React Query", "Zod", "PostgreSQL", "Drizzle ORM"],
       "whyThisStack": [
-        "Next.js supports a scalable routing and rendering model for SaaS-style products",
-        "TypeScript helps keep shared data models safe as features expand",
-        "React Query improves server-state handling and caching for dashboard workflows",
-        "Zod makes form and API input validation explicit and predictable"
+        "Next.js supports both the frontend and API Routes in a single project, simplifying deployment to Vercel",
+        "React Query handles server state, caching, and background refetching cleanly for dashboard workflows",
+        "Drizzle ORM keeps database interactions type-safe and easy to maintain alongside TypeScript",
+        "Zod provides consistent validation across API inputs and form handling"
       ],
       "keyFeatures": [
-        "Responsive dashboard layout",
-        "User authentication and protected routes",
-        "Loading and error states for smoother task workflows",
-        "Dark and light theme support"
+        "Responsive dashboard layout with charts and productivity metrics",
+        "JWT authentication with refresh token flow and protected routes",
+        "Dark and light theme support",
+        "Loading and error states across all data views",
+        "Fullstack architecture using Next.js API Routes, PostgreSQL via Neon, and Drizzle ORM"
       ],
       "challengesTradeoffs": [
-        "Balancing flexibility with UI simplicity as feature scope grows",
-        "Choosing where to optimise early versus waiting for real usage patterns",
-        "Keeping components reusable without over-engineering abstractions"
+        "Deciding when to optimise early versus waiting for real usage patterns to emerge",
+        "Keeping components reusable without over-engineering abstractions too soon",
+        "Migrating the backend mid-project without breaking the existing frontend behaviour"
       ],
       "whatILearned": [
-        "A stable data model early on reduces refactor cost later",
-        "Performance and clarity are closely connected: less visual noise improves perceived speed",
-        "Consistent UX patterns matter more than adding many isolated features"
+        "A stable data model early on reduces refactor cost significantly as features grow",
+        "Consolidating frontend and backend in one Next.js project reduces deployment complexity and maintenance overhead",
+        "Performance and visual clarity are closely connected — reducing UI noise improves perceived responsiveness"
       ],
       "nextSteps": [
-        "Expand task planning workflows and data visualisation",
-        "Improve coverage for critical state transitions and user flows",
-        "Refine product-level features as the project evolves"
-      ]
-    }
-  },
-  {
-    "slug": "the-no-manual-life",
-    "title": "The No-Manual Life",
-    "category": "Accessibility Project",
-    "description": "Accessibility-focused blog translating UI and a11y decisions into practical front-end guidance.",
-    "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/public/preview.png",
-    "stackPreview": ["Next.js", "TypeScript", "MDX", "Tailwind CSS"],
-    "status": "In Progress",
-    "featured": true,
-    "technologies": [
-      { "icon": "SiNextdotjs", "name": "Next.js" },
-      { "icon": "SiTypescript", "name": "TypeScript" },
-      { "icon": "SiTailwindcss", "name": "Tailwind CSS" }
-    ],
-    "links": {
-      "github": "https://github.com/patriciasegantine/a11y-blog-project",
-      "liveDemo": "https://the-no-manual-life-blog.vercel.app"
-    },
-    "caseStudy": {
-      "projectOverview": "The No-Manual Life is an accessibility-focused blog where I break down front-end decisions into practical, product-ready guidance.",
-      "problemPurpose": "A lot of accessibility content is either too basic or too abstract. This project translates accessibility principles into implementation patterns teams can apply more easily in real products.",
-      "myFocus": [
-        "Writing clear case-style articles based on real implementation decisions",
-        "Building a content structure that is easy to scan and navigate",
-        "Applying inclusive defaults in typography, semantics, and interaction states"
-      ],
-      "techStack": ["Next.js", "TypeScript", "MDX", "Tailwind CSS", "axe-core", "Lighthouse"],
-      "whyThisStack": [
-        "MDX supports scalable, component-driven technical writing",
-        "Next.js keeps routing and content delivery simple for a growing publication",
-        "Tailwind CSS helps create consistent and accessible UI patterns quickly",
-        "axe-core and Lighthouse support accessibility validation during development"
-      ],
-      "keyFeatures": [
-        "Semantic page structure and keyboard-friendly navigation",
-        "Accessibility-first implementation patterns",
-        "Reusable content structure for technical writing",
-        "Progressive enhancement and performance-aware front-end choices"
-      ],
-      "challengesTradeoffs": [
-        "Balancing writing depth with readability for different audiences",
-        "Keeping content production consistent while maintaining structural quality",
-        "Choosing how much design polish to add without slowing publishing"
-      ],
-      "whatILearned": [
-        "Technical storytelling gets stronger when examples are tied to product outcomes",
-        "Clear content information architecture makes expertise more visible",
-        "Accessibility discussions are more useful when connected to delivery constraints"
-      ],
-      "nextSteps": [
-        "Publish structured series on forms, navigation, and performance",
-        "Add lightweight search and filtering by topic",
-        "Expand the project as both a learning laboratory and a professional showcase"
+        "Complete the backend migration to Next.js API Routes with PostgreSQL via Neon",
+        "Add a Design System with Storybook to standardise components across the dashboard",
+        "Expand data visualisation coverage and refine the component architecture"
       ]
     }
   },
@@ -117,120 +63,65 @@
     "slug": "brev-ly",
     "title": "Brev.ly",
     "category": "Full-stack Product",
-    "description": "URL shortener project focused on lightweight UX, clear validation, and scalable product foundations.",
+    "description": "Full-stack URL shortener with link management, access tracking, and CSV export via Cloudflare R2. Built with React, Fastify, and PostgreSQL — deployed to AWS S3 + CloudFront.",
     "image": "https://raw.githubusercontent.com/patriciasegantine/Brev.ly/main/client/public/preview.png",
-    "stackPreview": ["React", "TypeScript", "Node.js", "Zod"],
-    "status": "In Progress",
-    "featured": false,
+    "stackPreview": ["React", "TypeScript", "Fastify", "PostgreSQL"],
+    "status": "Completed",
+    "featured": true,
     "technologies": [
       { "icon": "SiReact", "name": "React" },
       { "icon": "SiTypescript", "name": "TypeScript" },
-      { "icon": "SiNodedotjs", "name": "Node.js" },
+      { "icon": "SiVite", "name": "Vite" },
+      { "icon": "SiNodedotjs", "name": "Fastify" },
+      { "icon": "SiPostgresql", "name": "PostgreSQL" },
+      { "icon": "SiDrizzle", "name": "Drizzle ORM" },
       { "icon": "SiZod", "name": "Zod" }
     ],
     "links": {
-      "github": "https://github.com/patriciasegantine/Brev.ly"
+      "github": "https://github.com/patriciasegantine/brev.ly"
     },
     "caseStudy": {
-      "projectOverview": "Brev.ly is a URL shortener project built around a lightweight interface and a simple full-stack structure with separate client and server applications.",
-      "problemPurpose": "Link tools are often either too basic or overloaded with features. The goal here is to provide an efficient core experience first, with room to scale later.",
+      "projectOverview": "Brev.ly is a full-stack URL shortening platform built as a monorepo with a React + Vite frontend and a Fastify + PostgreSQL API. It covers the full product lifecycle — from link creation and redirection to access tracking, CSV export via Cloudflare R2, and automated deployment to AWS S3 + CloudFront via GitHub Actions.",
+      "problemPurpose": "Most URL shorteners are either too basic or overloaded with unnecessary features. The goal was to build a focused, production-ready core experience — with clean validation, reliable state handling, and an infrastructure that could scale.",
       "myFocus": [
-        "Defining a clean short-link creation and management flow",
-        "Exploring validation and feedback patterns for fast interactions",
-        "Structuring the project in a way that can support future growth"
+        "Designing a clean and reliable link creation and management flow with strong validation",
+        "Implementing real-time access count sync across browser tabs using BroadcastChannel",
+        "Building a CSV export pipeline using Cloudflare R2 for CDN-accessible file delivery",
+        "Setting up a full CI/CD pipeline with GitHub Actions deploying to AWS S3 + CloudFront"
       ],
-      "techStack": ["React", "TypeScript", "Node.js", "Zod"],
+      "techStack": [
+        "React 19", "TypeScript", "Vite", "React Router", "Tailwind CSS",
+        "shadcn/ui", "React Query", "React Hook Form", "Zod",
+        "Fastify", "PostgreSQL", "Drizzle ORM", "Swagger",
+        "Docker", "Vitest", "GitHub Actions", "AWS S3", "CloudFront", "Cloudflare R2"
+      ],
       "whyThisStack": [
-        "React and TypeScript keep UI behaviour predictable and easy to evolve",
-        "Node.js fits a lightweight API flow for link generation and redirects",
-        "Zod helps enforce clear input contracts across client and server boundaries"
+        "Fastify provides a fast, lightweight API layer well-suited to a focused backend with clear route responsibilities",
+        "Drizzle ORM keeps database interactions type-safe and aligned with the TypeScript codebase",
+        "React Query handles server state and caching cleanly, reducing manual loading and error management",
+        "Cloudflare R2 offers CDN-backed file storage for CSV exports without the cost overhead of S3 for static assets"
       ],
       "keyFeatures": [
-        "Client and server split for clearer project structure",
-        "Short-link creation flow",
-        "Validation-focused product foundations"
+        "Short URL generation with validation and duplicate prevention",
+        "Redirection to original URLs",
+        "Access count tracking with real-time sync across tabs via BroadcastChannel",
+        "Infinite scroll using IntersectionObserver for paginated link loading",
+        "CSV export stored on Cloudflare R2 and accessible via CDN",
+        "Dark mode support",
+        "API documentation via Swagger UI",
+        "Automated CI/CD pipeline via GitHub Actions → AWS S3 + CloudFront"
       ],
       "challengesTradeoffs": [
-        "Choosing the right MVP scope before adding advanced features",
-        "Balancing simplicity with future extensibility",
-        "Structuring the project clearly while it is still evolving"
+        "Defining the right MVP scope to protect delivery speed without sacrificing product quality",
+        "Managing real-time state across browser tabs without introducing unnecessary complexity",
+        "Structuring the monorepo so client and server remain independent but easy to develop together"
       ],
       "whatILearned": [
-        "MVP definitions should protect delivery speed and product clarity",
-        "Validation strategy has a strong effect on perceived reliability",
-        "Foundational architecture decisions should support iteration, not perfection"
+        "BroadcastChannel is a simple and effective solution for cross-tab state sync without external libraries",
+        "A well-scoped MVP with solid validation foundations is easier to extend than a broad one with weak contracts",
+        "Automating deployment early removes friction and builds confidence throughout the development process"
       ],
-      "nextSteps": [
-        "Build the first complete end-to-end flow for link creation and redirect",
-        "Add clearer project documentation and live demo support",
-        "Expand the product only after the core experience feels solid"
-      ]
+      "nextSteps": []
     }
-  },
-  {
-  "slug": "widget-upload",
-  "title": "Widget Upload",
-  "category": "Full-stack Product",
-  "description": "File upload interface focused on feedback, validation, and a smooth production-like user experience.",
-  "image": "https://raw.githubusercontent.com/patriciasegantine/ftr-upload-client/main/public/preview.png",
-  "stackPreview": ["React", "TypeScript", "Zustand", "Tailwind CSS"],
-  "status": "In Progress",
-  "featured": false,
-  "technologies": [
-    { "icon": "SiReact", "name": "React" },
-    { "icon": "SiTypescript", "name": "TypeScript" },
-    { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
-    { "icon": "SiZod", "name": "Zod" }
-  ],
-  "links": {
-    "github": "https://github.com/patriciasegantine/ftr-upload-client"
-  },
-  "caseStudy": {
-    "projectOverview": "Upload Widget Client is a front-end file upload interface built to provide a clear, fast, and accessible experience when interacting with upload APIs.",
-    "problemPurpose": "File upload flows often seem simple until validation, progress feedback, and error handling need to work together cleanly. This project focuses on turning that interaction into a more polished, production-like experience.",
-    "myFocus": [
-      "Designing a clear upload flow with strong feedback and error states",
-      "Building a scalable component structure for real product-like interactions",
-      "Keeping the experience accessible, responsive, and easy to maintain"
-    ],
-    "techStack": [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Zustand",
-      "Radix UI",
-      "Motion",
-      "React Dropzone",
-      "Vitest",
-      "React Testing Library"
-    ],
-    "whyThisStack": [
-      "React and TypeScript support a predictable and maintainable UI architecture",
-      "Zustand keeps state management lightweight for interactive upload flows",
-      "Radix UI helps reinforce accessible interaction patterns",
-      "Motion improves feedback and transition quality without overcomplicating the UI"
-    ],
-    "keyFeatures": [
-      "Drag and drop file upload",
-      "Real-time upload progress feedback",
-      "Validation and error handling for invalid formats",
-      "Responsive and accessible interface design"
-    ],
-    "challengesTradeoffs": [
-      "Balancing smooth UX feedback with implementation simplicity",
-      "Handling validation and upload states without creating noisy UI behaviour",
-      "Keeping the architecture reusable while the product is still evolving"
-    ],
-    "whatILearned": [
-      "Upload flows require careful state design to feel reliable",
-      "Good feedback patterns improve perceived quality as much as visual polish",
-      "Accessibility matters even more in interaction-heavy components"
-    ],
-    "nextSteps": [
-      "Finish the remaining polish and integration details",
-      "Strengthen end-to-end flow between client and upload service",
-      "Expand testing coverage for critical upload states and edge cases"
-    ]
   }
-}
 ]

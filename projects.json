@@ -1,61 +1,68 @@
 [
-  {
-    "slug": "nexus-dashboard",
-    "title": "Nexus Dashboard",
-    "category": "SaaS Dashboard",
-    "description": "Analytics dashboard focused on data visualisation, productivity metrics, and scalable frontend architecture.",
-    "image": "https://raw.githubusercontent.com/patriciasegantine/nexus-dashboard-frontend/main/public/preview.png",
-    "stackPreview": ["Next.js", "TypeScript", "Tailwind CSS", "React Query"],
+   {
+    "slug": "nexus-app",
+    "title": "Nexus",
+    "category": "Project & Task Management",
+    "description": "Full-stack project management application with authentication, task tracking, Kanban board, and analytics. Built with Next.js App Router, Server Actions, and Prisma.",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/nexus-app/main/public/preview.png",
+    "stackPreview": ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
     "status": "In Progress",
     "featured": true,
     "technologies": [
       { "icon": "SiNextdotjs", "name": "Next.js" },
       { "icon": "SiTypescript", "name": "TypeScript" },
       { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
-      { "icon": "SiReactquery", "name": "React Query" },
+      { "icon": "SiPrisma", "name": "Prisma" },
+      { "icon": "SiPostgresql", "name": "PostgreSQL" },
       { "icon": "SiZod", "name": "Zod" }
     ],
     "links": {
-      "github": "https://github.com/patriciasegantine/nexus-dashboard",
-      "liveDemo": "https://ps-nexus-dashboard.vercel.app"
+      "github": "https://github.com/patriciasegantine/nexus-app",
+      "liveDemo": "https://ps-nexus.vercel.app"
     },
     "caseStudy": {
-      "projectOverview": "Nexus Dashboard is an analytics dashboard built to explore data visualisation, scalable component architecture, and fullstack development with Next.js. The frontend is live — the backend is being rebuilt using Next.js API Routes with PostgreSQL via Neon and Drizzle ORM, replacing a separate server to simplify the stack and enable a single Vercel deploy.",
-      "problemPurpose": "Many dashboard projects focus on visual polish without addressing the underlying data architecture. This project explores how to build a frontend that remains maintainable as data complexity grows — with clear state management, reliable loading patterns, and a component structure that scales.",
+      "projectOverview": "Nexus is a full-stack project management application built with Next.js 15 App Router. It covers authentication (Google OAuth + email/password), task and project management, a Kanban board, and an analytics dashboard with charts. The project started as a client-only frontend consuming an external REST API and has since been fully migrated to a server-first architecture using Server Components, Server Actions, and Prisma ORM.",
+      "problemPurpose": "The goal was to build a production-grade application that goes beyond visual polish, addressing data architecture, server-side rendering, type-safe mutations, and authentication in a single cohesive Next.js project. It also served as a real migration exercise: replacing a separate backend, React Query, and Axios with Next.js built-in capabilities.",
       "myFocus": [
-        "Building a scalable and maintainable component architecture for a data-heavy UI",
-        "Implementing JWT authentication with access tokens, refresh token flow, and protected routes",
-        "Designing clear loading, error, and empty states across dashboard views",
-        "Migrating the backend to Next.js API Routes to simplify the stack and reduce infrastructure overhead"
+        "Migrating from a client-side API-consuming frontend to a fullstack Next.js architecture with Server Components and Server Actions",
+        "Implementing Auth.js v5 with Google OAuth and email/password credentials, including password reset with email verification and rate limiting",
+        "Designing a type-safe Server Actions pattern with centralised ActionResult types and Zod validation",
+        "Building a co-located component and action architecture with per-feature subfolders and unit tests"
       ],
-      "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "React Query", "Zod", "PostgreSQL", "Drizzle ORM"],
+      "techStack": [
+        "Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui",
+        "Auth.js v5", "Prisma ORM", "PostgreSQL", "Nodemailer", "Zod", "Jest"
+      ],
       "whyThisStack": [
-        "Next.js supports both the frontend and API Routes in a single project, simplifying deployment to Vercel",
-        "React Query handles server state, caching, and background refetching cleanly for dashboard workflows",
-        "Drizzle ORM keeps database interactions type-safe and easy to maintain alongside TypeScript",
-        "Zod provides consistent validation across API inputs and form handling"
+        "Next.js App Router enables Server Components and Server Actions, eliminating the need for a separate API layer and client-side state management library",
+        "Prisma ORM provides type-safe database access that integrates cleanly with TypeScript and keeps schema and queries in sync",
+        "Auth.js v5 handles the full authentication lifecycle (sessions, OAuth, and credentials) with Edge-compatible middleware for route protection",
+        "Zod ensures consistent validation across Server Actions and form inputs, with errors surfaced to the UI in a uniform pattern"
       ],
       "keyFeatures": [
-        "Responsive dashboard layout with charts and productivity metrics",
-        "JWT authentication with refresh token flow and protected routes",
-        "Dark and light theme support",
-        "Loading and error states across all data views",
-        "Fullstack architecture using Next.js API Routes, PostgreSQL via Neon, and Drizzle ORM"
+        "Google OAuth and email/password authentication with password reset flow and rate limiting",
+        "IDOR protection on all database queries, with every query scoped by userId",
+        "Task management with filtering, pagination, tagging, and status tracking",
+        "Kanban board per project",
+        "Analytics dashboard with priority distribution and tasks-by-status charts",
+        "Dark and light theme with mobile-responsive layout and drawers",
+        "Reusable Server Actions with centralised ActionResult type and Zod validation"
       ],
       "challengesTradeoffs": [
-        "Deciding when to optimise early versus waiting for real usage patterns to emerge",
-        "Keeping components reusable without over-engineering abstractions too soon",
-        "Migrating the backend mid-project without breaking the existing frontend behaviour"
+        "Migrating incrementally from React Query and Axios to Server Actions without breaking existing features",
+        "Designing a scalable actions architecture, splitting monolithic files into co-located per-action modules with tests",
+        "Balancing server-side simplicity with client interactivity using the 'use client' boundary carefully"
       ],
       "whatILearned": [
-        "A stable data model early on reduces refactor cost significantly as features grow",
-        "Consolidating frontend and backend in one Next.js project reduces deployment complexity and maintenance overhead",
-        "Performance and visual clarity are closely connected — reducing UI noise improves perceived responsiveness"
+        "Server Components significantly reduce client bundle size and remove the need for explicit loading state management in most cases",
+        "Co-locating actions and tests in per-feature subfolders makes the codebase easier to navigate and reduces friction when adding tests",
+        "A centralised ActionResult type with consistent Zod validation across all Server Actions prevents a whole class of runtime errors"
       ],
       "nextSteps": [
-        "Complete the backend migration to Next.js API Routes with PostgreSQL via Neon",
-        "Add a Design System with Storybook to standardise components across the dashboard",
-        "Expand data visualisation coverage and refine the component architecture"
+        "Add E2E tests with Playwright covering the auth flow and critical user paths",
+        "Implement saved views, recurring tasks, and subtask support",
+        "Add email digest and keyboard shortcut support",
+        "Explore SaaS foundations: multi-user workspaces and billing"
       ]
     }
   },

@@ -67,68 +67,102 @@
     }
   },
   {
-    "slug": "brev-ly",
-    "title": "Brev.ly",
-    "category": "Full-stack Product",
-    "description": "Full-stack URL shortener with link management, access tracking, and CSV export via Cloudflare R2. Built with React, Fastify, and PostgreSQL — deployed to AWS S3 + CloudFront.",
-    "image": "https://raw.githubusercontent.com/patriciasegantine/Brev.ly/main/client/public/preview.png",
-    "stackPreview": ["React", "TypeScript", "Fastify", "PostgreSQL"],
-    "status": "Completed",
-    "featured": true,
-    "technologies": [
-      { "icon": "SiReact", "name": "React" },
-      { "icon": "SiTypescript", "name": "TypeScript" },
-      { "icon": "SiVite", "name": "Vite" },
-      { "icon": "SiNodedotjs", "name": "Fastify" },
-      { "icon": "SiPostgresql", "name": "PostgreSQL" },
-      { "icon": "SiDrizzle", "name": "Drizzle ORM" },
-      { "icon": "SiZod", "name": "Zod" }
-    ],
-    "links": {
-      "github": "https://github.com/patriciasegantine/brev.ly"
-    },
-    "caseStudy": {
-      "projectOverview": "Brev.ly is a full-stack URL shortening platform built as a monorepo with a React + Vite frontend and a Fastify + PostgreSQL API. It covers the full product lifecycle — from link creation and redirection to access tracking, CSV export via Cloudflare R2, and automated deployment to AWS S3 + CloudFront via GitHub Actions.",
-      "problemPurpose": "Most URL shorteners are either too basic or overloaded with unnecessary features. The goal was to build a focused, production-ready core experience — with clean validation, reliable state handling, and an infrastructure that could scale.",
-      "myFocus": [
-        "Designing a clean and reliable link creation and management flow with strong validation",
-        "Implementing real-time access count sync across browser tabs using BroadcastChannel",
-        "Building a CSV export pipeline using Cloudflare R2 for CDN-accessible file delivery",
-        "Setting up a full CI/CD pipeline with GitHub Actions deploying to AWS S3 + CloudFront"
-      ],
-      "techStack": [
-        "React 19", "TypeScript", "Vite", "React Router", "Tailwind CSS",
-        "shadcn/ui", "React Query", "React Hook Form", "Zod",
-        "Fastify", "PostgreSQL", "Drizzle ORM", "Swagger",
-        "Docker", "Vitest", "GitHub Actions", "AWS S3", "CloudFront", "Cloudflare R2"
-      ],
-      "whyThisStack": [
-        "Fastify provides a fast, lightweight API layer well-suited to a focused backend with clear route responsibilities",
-        "Drizzle ORM keeps database interactions type-safe and aligned with the TypeScript codebase",
-        "React Query handles server state and caching cleanly, reducing manual loading and error management",
-        "Cloudflare R2 offers CDN-backed file storage for CSV exports without the cost overhead of S3 for static assets"
-      ],
-      "keyFeatures": [
-        "Short URL generation with validation and duplicate prevention",
-        "Redirection to original URLs",
-        "Access count tracking with real-time sync across tabs via BroadcastChannel",
-        "Infinite scroll using IntersectionObserver for paginated link loading",
-        "CSV export stored on Cloudflare R2 and accessible via CDN",
-        "Dark mode support",
-        "API documentation via Swagger UI",
-        "Automated CI/CD pipeline via GitHub Actions → AWS S3 + CloudFront"
-      ],
-      "challengesTradeoffs": [
-        "Defining the right MVP scope to protect delivery speed without sacrificing product quality",
-        "Managing real-time state across browser tabs without introducing unnecessary complexity",
-        "Structuring the monorepo so client and server remain independent but easy to develop together"
-      ],
-      "whatILearned": [
-        "BroadcastChannel is a simple and effective solution for cross-tab state sync without external libraries",
-        "A well-scoped MVP with solid validation foundations is easier to extend than a broad one with weak contracts",
-        "Automating deployment early removes friction and builds confidence throughout the development process"
-      ],
-      "nextSteps": []
-    }
-  }
+     "slug": "redirect-lab",
+     "title": "Redirect Lab",
+     "category": "Full-stack Product",
+     "description": "Full-stack link management platform with custom short URLs, access tracking, cross-tab synchronisation, accessible interactions, infinite scrolling, and CSV export through Cloudflare R2.",
+     "image": "https://raw.githubusercontent.com/patriciasegantine/redirect-lab-client/main/public/preview.png",
+     "stackPreview": ["React", "TypeScript", "Fastify", "PostgreSQL"],
+     "status": "In Progress",
+     "featured": true,
+     "technologies": [
+       { "icon": "SiReact", "name": "React" },
+       { "icon": "SiTypescript", "name": "TypeScript" },
+       { "icon": "SiVite", "name": "Vite" },
+       { "icon": "SiNodedotjs", "name": "Fastify" },
+       { "icon": "SiPostgresql", "name": "PostgreSQL" },
+       { "icon": "SiDrizzle", "name": "Drizzle ORM" },
+       { "icon": "SiZod", "name": "Zod" },
+       { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
+       { "icon": "SiReactquery", "name": "TanStack Query" },
+       { "icon": "SiVitest", "name": "Vitest" }
+     ],
+     "links": {
+       "github": "https://github.com/patriciasegantine/redirect-lab-client",
+       "liveDemo": "https://ps-redirect-lab.vercel.app"
+     },
+     "caseStudy": {
+       "projectOverview": "Redirect Lab is a full-stack link management platform built with an independent React client and Fastify API. It evolved from Brev.ly, a postgraduate coursework project created to explore full-stack development and AWS. The original monorepo remains archived, while Redirect Lab introduces a new identity, independently deployable repositories, stronger accessibility and testing practices, and a cost-conscious cloud architecture.",
+       "problemPurpose": "The goal was to transform an academic URL shortener into a maintainable portfolio product with a focused user experience, reliable state handling, automated quality checks, independent delivery pipelines, and infrastructure that can operate at little or no cost.",
+       "myFocus": [
+         "Separating the original monorepo into independent client and server repositories while preserving its development history",
+         "Rebranding the product and refining the complete link creation, management, redirection, and export experience",
+         "Improving accessibility with semantic controls, focus management, descriptive labels, and axe-based component tests",
+         "Synchronising access counts across browser tabs with BroadcastChannel without introducing additional real-time infrastructure",
+         "Migrating deployment from AWS to a cost-conscious architecture using Vercel, Railway, Neon, and Cloudflare R2"
+       ],
+       "techStack": [
+         "React 19",
+         "TypeScript",
+         "Vite",
+         "React Router",
+         "Tailwind CSS",
+         "shadcn/ui",
+         "TanStack Query",
+         "React Hook Form",
+         "Zod",
+         "Fastify",
+         "PostgreSQL",
+         "Drizzle ORM",
+         "Scalar API Reference",
+         "Vitest",
+         "Testing Library",
+         "axe-core",
+         "GitHub Actions",
+         "Vercel",
+         "Railway",
+         "Neon",
+         "Cloudflare R2"
+       ],
+       "whyThisStack": [
+         "React and TanStack Query provide a focused client architecture with explicit server-state caching, mutation feedback, and paginated data loading",
+         "Fastify and Drizzle ORM create a lightweight, type-safe API and persistence layer that stays aligned with the TypeScript domain model",
+         "Vitest, Testing Library, and axe-core support fast behavioral and accessibility testing without introducing external testing services",
+         "Vercel, Railway, Neon, and Cloudflare R2 provide independently deployable infrastructure with practical free or low-cost tiers"
+       ],
+       "keyFeatures": [
+         "Custom short URL creation with validation and duplicate prevention",
+         "Redirection to original URLs with access count tracking",
+         "Cross-tab access count synchronisation through BroadcastChannel",
+         "Paginated link loading with infinite scrolling and IntersectionObserver",
+         "CSV export stored on Cloudflare R2 and delivered through a public URL",
+         "Contextual loading states and success/error feedback for link mutations",
+         "Responsive dark and light themes",
+         "Accessible forms, dialogs, controls, focus states, and automated axe checks",
+         "Interactive API documentation through Scalar",
+         "Automated pull request validation with tests, type-checking, and linting"
+       ],
+       "challengesTradeoffs": [
+         "Separating the original monorepo while preserving history and allowing the client and API to evolve independently",
+         "Replacing the original AWS delivery setup with lower-cost services without losing deployment reliability",
+         "Keeping access counts synchronised across tabs without adding WebSockets or an external real-time service",
+         "Protecting delivery scope by postponing authentication and advanced analytics until the core product is stable"
+       ],
+       "whatILearned": [
+         "Independent repositories make ownership, documentation, deployment, and release cycles clearer for full-stack projects",
+         "BroadcastChannel can solve cross-tab synchronisation elegantly when full real-time infrastructure would be unnecessary",
+         "Testing interaction states and accessibility behavior provides more confidence than testing implementation details",
+         "Infrastructure decisions should balance technical capability, operational complexity, and the realistic cost of maintaining a portfolio product"
+       ],
+       "nextSteps": [
+         "Build an access analytics dashboard with clicks grouped by period",
+         "Add QR Code generation and PNG download",
+         "Introduce link search and sorting",
+         "Support optional link expiration with a dedicated expired state",
+         "Add a UTM parameter builder with URL preview",
+         "Allow editing the destination URL of an existing short link",
+         "Add inline copy feedback and bulk deletion"
+       ]
+     }
+   }
 ]

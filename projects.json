@@ -1,5 +1,5 @@
 [
-   {
+  {
     "slug": "nexus-app",
     "title": "Nexus",
     "category": "Project & Task Management",
@@ -21,148 +21,91 @@
       "liveDemo": "https://ps-nexus.vercel.app"
     },
     "caseStudy": {
-      "projectOverview": "Nexus is a full-stack project management application built with Next.js 15 App Router. It covers authentication (Google OAuth + email/password), task and project management, a Kanban board, and an analytics dashboard with charts. The project started as a client-only frontend consuming an external REST API and has since been fully migrated to a server-first architecture using Server Components, Server Actions, and Prisma ORM.",
-      "problemPurpose": "The goal was to build a production-grade application that goes beyond visual polish, addressing data architecture, server-side rendering, type-safe mutations, and authentication in a single cohesive Next.js project. It also served as a real migration exercise: replacing a separate backend, React Query, and Axios with Next.js built-in capabilities.",
-      "myFocus": [
-        "Migrating from a client-side API-consuming frontend to a fullstack Next.js architecture with Server Components and Server Actions",
-        "Implementing Auth.js v5 with Google OAuth and email/password credentials, including password reset with email verification and rate limiting",
-        "Designing a type-safe Server Actions pattern with centralised ActionResult types and Zod validation",
-        "Building a co-located component and action architecture with per-feature subfolders and unit tests"
-      ],
+      "projectOverview": "Nexus is a full-stack project management application built with Next.js 15 App Router. It covers authentication (Google OAuth and email/password), task and project management, a Kanban board, and an analytics dashboard with charts. It started as a client-only frontend consuming an external REST API and has since moved to a server-first architecture using Server Components, Server Actions, and Prisma ORM, which made it a real migration exercise as much as a product.",
       "techStack": [
         "Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui",
-        "Auth.js v5", "Prisma ORM", "PostgreSQL", "Nodemailer", "Zod", "Jest"
+        "Auth.js v5", "Prisma ORM", "PostgreSQL", "Zod", "Jest"
       ],
       "whyThisStack": [
-        "Next.js App Router enables Server Components and Server Actions, eliminating the need for a separate API layer and client-side state management library",
+        "Next.js App Router enables Server Components and Server Actions, which removed the need for a separate API layer and a client-side state management library",
         "Prisma ORM provides type-safe database access that integrates cleanly with TypeScript and keeps schema and queries in sync",
         "Auth.js v5 handles the full authentication lifecycle (sessions, OAuth, and credentials) with Edge-compatible middleware for route protection",
-        "Zod ensures consistent validation across Server Actions and form inputs, with errors surfaced to the UI in a uniform pattern"
+        "A centralised ActionResult type with Zod validation keeps Server Actions consistent, with errors surfaced to the UI in a uniform pattern"
       ],
       "keyFeatures": [
         "Google OAuth and email/password authentication with password reset flow and rate limiting",
-        "IDOR protection on all database queries, with every query scoped by userId",
+        "Database queries scoped by user to keep each account's data isolated",
         "Task management with filtering, pagination, tagging, and status tracking",
         "Kanban board per project",
         "Analytics dashboard with priority distribution and tasks-by-status charts",
-        "Dark and light theme with mobile-responsive layout and drawers",
-        "Reusable Server Actions with centralised ActionResult type and Zod validation"
+        "Reusable Server Actions with a centralised ActionResult type and Zod validation"
       ],
       "challengesTradeoffs": [
         "Migrating incrementally from React Query and Axios to Server Actions without breaking existing features",
         "Designing a scalable actions architecture, splitting monolithic files into co-located per-action modules with tests",
-        "Balancing server-side simplicity with client interactivity using the 'use client' boundary carefully"
-      ],
-      "whatILearned": [
-        "Server Components significantly reduce client bundle size and remove the need for explicit loading state management in most cases",
-        "Co-locating actions and tests in per-feature subfolders makes the codebase easier to navigate and reduces friction when adding tests",
-        "A centralised ActionResult type with consistent Zod validation across all Server Actions prevents a whole class of runtime errors"
+        "Balancing server-side simplicity with client interactivity by using the 'use client' boundary carefully"
       ],
       "nextSteps": [
-        "Add E2E tests with Playwright covering the auth flow and critical user paths",
-        "Implement saved views, recurring tasks, and subtask support",
-        "Add email digest and keyboard shortcut support",
         "Explore SaaS foundations: multi-user workspaces and billing"
       ]
     }
   },
   {
-     "slug": "redirect-lab",
-     "title": "Redirect Lab",
-     "category": "Full-stack Product",
-     "description": "Full-stack link management platform with custom short URLs, access tracking, cross-tab synchronisation, accessible interactions, infinite scrolling, and CSV export through Cloudflare R2.",
-     "image": "https://raw.githubusercontent.com/patriciasegantine/redirect-lab-client/main/public/preview.png",
-     "stackPreview": ["React", "TypeScript", "Fastify", "PostgreSQL"],
-     "status": "In Progress",
-     "featured": true,
-     "technologies": [
-       { "icon": "SiReact", "name": "React" },
-       { "icon": "SiTypescript", "name": "TypeScript" },
-       { "icon": "SiVite", "name": "Vite" },
-       { "icon": "SiNodedotjs", "name": "Fastify" },
-       { "icon": "SiPostgresql", "name": "PostgreSQL" },
-       { "icon": "SiDrizzle", "name": "Drizzle ORM" },
-       { "icon": "SiZod", "name": "Zod" },
-       { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
-       { "icon": "SiReactquery", "name": "TanStack Query" },
-       { "icon": "SiVitest", "name": "Vitest" }
-     ],
-     "links": {
-       "github": "https://github.com/patriciasegantine/redirect-lab-client",
-       "liveDemo": "https://ps-redirect-lab.vercel.app"
-     },
-     "caseStudy": {
-       "projectOverview": "Redirect Lab is a full-stack link management platform built with an independent React client and Fastify API. It evolved from Brev.ly, a postgraduate coursework project created to explore full-stack development and AWS. The original monorepo remains archived, while Redirect Lab introduces a new identity, independently deployable repositories, stronger accessibility and testing practices, and a cost-conscious cloud architecture.",
-       "problemPurpose": "The goal was to transform an academic URL shortener into a maintainable portfolio product with a focused user experience, reliable state handling, automated quality checks, independent delivery pipelines, and infrastructure that can operate at little or no cost.",
-       "myFocus": [
-         "Separating the original monorepo into independent client and server repositories while preserving its development history",
-         "Rebranding the product and refining the complete link creation, management, redirection, and export experience",
-         "Improving accessibility with semantic controls, focus management, descriptive labels, and axe-based component tests",
-         "Synchronising access counts across browser tabs with BroadcastChannel without introducing additional real-time infrastructure",
-         "Migrating deployment from AWS to a cost-conscious architecture using Vercel, Railway, Neon, and Cloudflare R2"
-       ],
-       "techStack": [
-         "React 19",
-         "TypeScript",
-         "Vite",
-         "React Router",
-         "Tailwind CSS",
-         "shadcn/ui",
-         "TanStack Query",
-         "React Hook Form",
-         "Zod",
-         "Fastify",
-         "PostgreSQL",
-         "Drizzle ORM",
-         "Scalar API Reference",
-         "Vitest",
-         "Testing Library",
-         "axe-core",
-         "GitHub Actions",
-         "Vercel",
-         "Railway",
-         "Neon",
-         "Cloudflare R2"
-       ],
-       "whyThisStack": [
-         "React and TanStack Query provide a focused client architecture with explicit server-state caching, mutation feedback, and paginated data loading",
-         "Fastify and Drizzle ORM create a lightweight, type-safe API and persistence layer that stays aligned with the TypeScript domain model",
-         "Vitest, Testing Library, and axe-core support fast behavioral and accessibility testing without introducing external testing services",
-         "Vercel, Railway, Neon, and Cloudflare R2 provide independently deployable infrastructure with practical free or low-cost tiers"
-       ],
-       "keyFeatures": [
-         "Custom short URL creation with validation and duplicate prevention",
-         "Redirection to original URLs with access count tracking",
-         "Cross-tab access count synchronisation through BroadcastChannel",
-         "Paginated link loading with infinite scrolling and IntersectionObserver",
-         "CSV export stored on Cloudflare R2 and delivered through a public URL",
-         "Contextual loading states and success/error feedback for link mutations",
-         "Responsive dark and light themes",
-         "Accessible forms, dialogs, controls, focus states, and automated axe checks",
-         "Interactive API documentation through Scalar",
-         "Automated pull request validation with tests, type-checking, and linting"
-       ],
-       "challengesTradeoffs": [
-         "Separating the original monorepo while preserving history and allowing the client and API to evolve independently",
-         "Replacing the original AWS delivery setup with lower-cost services without losing deployment reliability",
-         "Keeping access counts synchronised across tabs without adding WebSockets or an external real-time service",
-         "Protecting delivery scope by postponing authentication and advanced analytics until the core product is stable"
-       ],
-       "whatILearned": [
-         "Independent repositories make ownership, documentation, deployment, and release cycles clearer for full-stack projects",
-         "BroadcastChannel can solve cross-tab synchronisation elegantly when full real-time infrastructure would be unnecessary",
-         "Testing interaction states and accessibility behavior provides more confidence than testing implementation details",
-         "Infrastructure decisions should balance technical capability, operational complexity, and the realistic cost of maintaining a portfolio product"
-       ],
-       "nextSteps": [
-         "Build an access analytics dashboard with clicks grouped by period",
-         "Add QR Code generation and PNG download",
-         "Introduce link search and sorting",
-         "Support optional link expiration with a dedicated expired state",
-         "Add a UTM parameter builder with URL preview",
-         "Allow editing the destination URL of an existing short link",
-         "Add inline copy feedback and bulk deletion"
-       ]
-     }
-   }
+    "slug": "redirect-lab",
+    "title": "Redirect Lab",
+    "category": "Full-stack Product",
+    "description": "Full-stack link management platform with custom short URLs, access tracking, cross-tab synchronisation, accessible interactions, infinite scrolling, and CSV export through Cloudflare R2.",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/redirect-lab-client/main/public/preview.png",
+    "stackPreview": ["React", "TypeScript", "Fastify", "PostgreSQL"],
+    "status": "In Progress",
+    "featured": true,
+    "technologies": [
+      { "icon": "SiReact", "name": "React" },
+      { "icon": "SiTypescript", "name": "TypeScript" },
+      { "icon": "SiVite", "name": "Vite" },
+      { "icon": "SiNodedotjs", "name": "Fastify" },
+      { "icon": "SiPostgresql", "name": "PostgreSQL" },
+      { "icon": "SiDrizzle", "name": "Drizzle ORM" },
+      { "icon": "SiZod", "name": "Zod" },
+      { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
+      { "icon": "SiReactquery", "name": "TanStack Query" },
+      { "icon": "SiVitest", "name": "Vitest" }
+    ],
+    "links": {
+      "github": "https://github.com/patriciasegantine/redirect-lab-client",
+      "liveDemo": "https://ps-redirect-lab.vercel.app"
+    },
+    "caseStudy": {
+      "projectOverview": "Redirect Lab is a full-stack link management platform built with an independent React client and Fastify API. It evolved from an earlier project and was rebuilt with a new identity, independently deployable repositories, stronger accessibility and testing practices, and a cost-conscious cloud architecture. The goal was to turn a basic URL shortener into a maintainable portfolio product with a focused user experience, reliable state handling, automated quality checks, and infrastructure that can run at little or no cost.",
+      "techStack": [
+        "React 19", "TypeScript", "Vite", "Tailwind CSS",
+        "TanStack Query", "Zod", "Fastify", "PostgreSQL",
+        "Drizzle ORM", "Vitest", "Cloudflare R2"
+      ],
+      "whyThisStack": [
+        "React and TanStack Query provide a focused client architecture with explicit server-state caching, mutation feedback, and paginated data loading",
+        "Fastify and Drizzle ORM create a lightweight, type-safe API and persistence layer that stays aligned with the TypeScript domain model",
+        "Vitest, Testing Library, and axe-core support fast behavioral and accessibility testing without adding external testing services",
+        "Vercel, Railway, Neon, and Cloudflare R2 provide independently deployable infrastructure with practical free or low-cost tiers"
+      ],
+      "keyFeatures": [
+        "Custom short URL creation with validation and duplicate prevention",
+        "Cross-tab access count synchronisation through BroadcastChannel, without additional real-time infrastructure",
+        "Paginated link loading with infinite scrolling and IntersectionObserver",
+        "CSV export stored on Cloudflare R2 and delivered through a public URL",
+        "Accessible forms, dialogs, controls, and focus states, with automated axe checks",
+        "Responsive dark and light themes"
+      ],
+      "challengesTradeoffs": [
+        "Separating the original monorepo while preserving history and letting the client and API evolve independently",
+        "Replacing the original AWS delivery setup with lower-cost services without losing deployment reliability",
+        "Keeping access counts synchronised across tabs without adding WebSockets or an external real-time service",
+        "Protecting delivery scope by postponing authentication and advanced analytics until the core product was stable"
+      ],
+      "nextSteps": [
+        "Build an access analytics dashboard with clicks grouped by period",
+        "Add QR Code generation and PNG download"
+      ]
+    }
+  }
 ]

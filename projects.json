@@ -6,7 +6,7 @@
     "description": "Full-stack project management application with authentication, task tracking, Kanban board, and analytics. Built with Next.js App Router, Server Actions, and Prisma.",
     "image": "https://raw.githubusercontent.com/patriciasegantine/nexus-app/main/public/preview.png",
     "stackPreview": ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
-    "status": "In Progress",
+    "status": "Ongoing",
     "featured": true,
     "technologies": [
       { "icon": "SiNextdotjs", "name": "Next.js" },
@@ -21,7 +21,7 @@
       "liveDemo": "https://ps-nexus.vercel.app"
     },
     "caseStudy": {
-      "projectOverview": "Nexus is a full-stack project management application built with Next.js 15 App Router. It covers authentication (Google OAuth and email/password), task and project management, a Kanban board, and an analytics dashboard with charts. It started as a client-only frontend consuming an external REST API and has since moved to a server-first architecture using Server Components, Server Actions, and Prisma ORM, which made it a real migration exercise as much as a product.",
+      "projectOverview": "Nexus is a full-stack project management application built with Next.js 15 App Router. It covers authentication, project and task management, Kanban workflows, and an analytics dashboard. It started as a client-only frontend consuming an external REST API and has since moved to a server-first architecture using Server Components, Server Actions, and Prisma ORM, making it a migration exercise as much as a product. Nexus is intentionally an ongoing project developed in cycles: I pause it to explore other products, then return with new ideas, architectural improvements, and lessons learned elsewhere. Rather than targeting a fixed final state, it acts as a long-term environment for evolving my full-stack, product, and SaaS practices.",
       "techStack": [
         "Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui",
         "Auth.js v5", "Prisma ORM", "PostgreSQL", "Zod", "Jest"
@@ -43,7 +43,8 @@
       "challengesTradeoffs": [
         "Migrating incrementally from React Query and Axios to Server Actions without breaking existing features",
         "Designing a scalable actions architecture, splitting monolithic files into co-located per-action modules with tests",
-        "Balancing server-side simplicity with client interactivity by using the 'use client' boundary carefully"
+        "Balancing server-side simplicity with client interactivity by using the 'use client' boundary carefully",
+        "Maintaining architectural consistency in a long-running project that evolves through separate development cycles"
       ],
       "nextSteps": [
         "Explore SaaS foundations: multi-user workspaces and billing"
@@ -57,7 +58,7 @@
     "description": "Full-stack link management platform with custom short URLs, access tracking, cross-tab synchronisation, accessible interactions, infinite scrolling, and CSV export through Cloudflare R2.",
     "image": "https://raw.githubusercontent.com/patriciasegantine/redirect-lab-client/main/public/preview.png",
     "stackPreview": ["React", "TypeScript", "Fastify", "PostgreSQL"],
-    "status": "In Progress",
+    "status": "Completed",
     "featured": true,
     "technologies": [
       { "icon": "SiReact", "name": "React" },
@@ -105,6 +106,74 @@
       "nextSteps": [
         "Build an access analytics dashboard with clicks grouped by period",
         "Add QR Code generation and PNG download"
+      ]
+    }
+  },
+  {
+    "slug": "auth-starter",
+    "title": "Auth Starter",
+    "category": "Developer Tooling",
+    "description": "Reusable Next.js authentication foundation created to remove repetitive setup from new projects. Split into a clean template and a public documentation and demo site.",
+    "image": "https://raw.githubusercontent.com/patriciasegantine/nextjs-auth-starter-site/main/public/preview.png",
+    "stackPreview": ["Next.js", "TypeScript", "Better Auth", "Prisma"],
+    "status": "In Progress",
+    "featured": true,
+    "technologies": [
+      { "icon": "SiNextdotjs", "name": "Next.js" },
+      { "icon": "SiTypescript", "name": "TypeScript" },
+      { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
+      { "icon": "SiPrisma", "name": "Prisma" },
+      { "icon": "SiPostgresql", "name": "PostgreSQL" }
+    ],
+    "links": {
+      "github": "https://github.com/patriciasegantine/nextjs-auth-starter-template"
+    },
+    "caseStudy": {
+      "projectOverview": "Auth Starter is a reusable authentication foundation for Next.js applications. It was created after noticing that authentication, database configuration, protected routes, social login, and password recovery required similar setup across many small projects. The project separates the reusable template from its public website, documentation, and future live demo.",
+      "problemPurpose": "Repeatedly rebuilding authentication infrastructure was slowing down the start of new product experiments. The goal is to provide a secure, understandable, and reusable foundation that lets new projects begin closer to the product logic.",
+      "myFocus": [
+        "Designing a reusable architecture without product-specific assumptions",
+        "Keeping the template separate from marketing and documentation code",
+        "Choosing current stable technologies and sensible security defaults",
+        "Creating a setup that remains understandable for developers without deep backend experience"
+      ],
+      "techStack": [
+        "Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4",
+        "Better Auth", "Prisma 7", "PostgreSQL", "Resend"
+      ],
+      "whyThisStack": [
+        "Next.js App Router provides server-rendered routes, Route Handlers, and a clear boundary between public and protected application areas",
+        "Better Auth offers a stable modern API for credentials, OAuth, sessions, and password recovery",
+        "Prisma and PostgreSQL provide type-safe relational persistence that can be reused across different products",
+        "Resend provides a focused transactional email integration for password recovery",
+        "Separating the site and template repositories prevents generated projects from inheriting portfolio and documentation code"
+      ],
+      "keyFeatures": [
+        "Reusable email and password authentication flow",
+        "Optional Google OAuth configuration",
+        "Server-validated protected routes",
+        "PostgreSQL persistence through Prisma",
+        "Password recovery flow with transactional email support",
+        "Separate public site and clean template repositories",
+        "Adaptive visual identity and favicon for light and dark browser themes"
+      ],
+      "challengesTradeoffs": [
+        "Defining what belongs to the reusable template and what belongs only to the public demonstration site",
+        "Choosing Better Auth stable instead of building the starter on the still-beta Auth.js v5 API",
+        "Balancing a complete authentication foundation with a template that remains small and easy to understand",
+        "Planning for future automation without prematurely introducing the complexity of a CLI"
+      ],
+      "whatILearned": [
+        "Reusable foundations require stricter separation of responsibilities than product-specific applications",
+        "Documentation should follow a validated implementation instead of defining behavior too early",
+        "A template repository and an installable package solve different problems",
+        "Version stability is an important architectural consideration for reusable developer tooling"
+      ],
+      "nextSteps": [
+        "Finish and validate the template against a clean PostgreSQL database",
+        "Test credentials, Google OAuth, password recovery, and protected routes end to end",
+        "Publish the documentation and live demo site",
+        "Evaluate a future create-nextjs-auth-starter CLI after using the template in real projects"
       ]
     }
   }

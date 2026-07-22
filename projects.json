@@ -126,7 +126,8 @@
       { "icon": "SiPostgresql", "name": "PostgreSQL" }
     ],
     "links": {
-      "github": "https://github.com/patriciasegantine/nextjs-auth-starter-template"
+      "github": "https://github.com/patriciasegantine/nextjs-auth-starter-site",
+       "liveDemo": "https://ps-nextjs-auth-starter.vercel.app"
     },
     "caseStudy": {
       "projectOverview": "Auth Starter is a reusable authentication foundation for Next.js applications. It was created after noticing that authentication, database configuration, protected routes, social login, and password recovery required similar setup across many small projects. The project separates the reusable template from its public website, documentation, and future live demo.",

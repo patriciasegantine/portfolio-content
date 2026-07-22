@@ -21,33 +21,51 @@
       "liveDemo": "https://ps-nexus.vercel.app"
     },
     "caseStudy": {
-      "projectOverview": "Nexus is a full-stack project management application built with Next.js 15 App Router. It covers authentication, project and task management, Kanban workflows, and an analytics dashboard. It started as a client-only frontend consuming an external REST API and has since moved to a server-first architecture using Server Components, Server Actions, and Prisma ORM, making it a migration exercise as much as a product. Nexus is intentionally an ongoing project developed in cycles: I pause it to explore other products, then return with new ideas, architectural improvements, and lessons learned elsewhere. Rather than targeting a fixed final state, it acts as a long-term environment for evolving my full-stack, product, and SaaS practices.",
+      "projectOverview": "Nexus began as an exercise in shipping a complete product from a single idea: a task manager that consumed an external REST API. The question that kept pulling me back was what would change if I took ownership of the entire stack instead of stopping at the frontend. That question became the reason to migrate the application incrementally to a server-first architecture using Server Components, Server Actions, and Prisma ORM, making the project as much a migration exercise as a product. Nexus is intentionally developed in cycles: I pause it to explore other products and return with new ideas, architectural improvements, and lessons learned elsewhere. Rather than targeting a fixed final state, it acts as a long-term environment for evolving my full-stack, product, and SaaS practices.",
       "techStack": [
-        "Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui",
-        "Auth.js v5", "Prisma ORM", "PostgreSQL", "Zod", "Jest"
+        "Next.js 15",
+        "TypeScript",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Auth.js v5",
+        "Prisma ORM",
+        "PostgreSQL",
+        "Zod",
+        "Jest",
+        "Nodemailer",
+        "Recharts"
       ],
       "whyThisStack": [
-        "Next.js App Router enables Server Components and Server Actions, which removed the need for a separate API layer and a client-side state management library",
-        "Prisma ORM provides type-safe database access that integrates cleanly with TypeScript and keeps schema and queries in sync",
-        "Auth.js v5 handles the full authentication lifecycle (sessions, OAuth, and credentials) with Edge-compatible middleware for route protection",
-        "A centralised ActionResult type with Zod validation keeps Server Actions consistent, with errors surfaced to the UI in a uniform pattern"
+        "Next.js App Router enables Server Components and Server Actions, removing the need for a separate API layer and reducing client-side state management",
+        "Prisma ORM provides type-safe database access that integrates cleanly with TypeScript and keeps the schema and application queries aligned",
+        "Auth.js v5 manages credentials, Google OAuth, sessions, and route protection within the Next.js architecture",
+        "Zod validates data at application boundaries, while a centralised ActionResult type gives Server Actions a consistent success and error contract",
+        "Nodemailer supports password recovery through standard SMTP without tying the application to a transactional email provider"
       ],
       "keyFeatures": [
-        "Google OAuth and email/password authentication with password reset flow and rate limiting",
-        "Database queries scoped by user to keep each account's data isolated",
-        "Task management with filtering, pagination, tagging, and status tracking",
-        "Kanban board per project",
-        "Analytics dashboard with priority distribution and tasks-by-status charts",
+        "Google OAuth and email/password authentication with password recovery and rate limiting",
+        "Database queries scoped by user to keep account data isolated",
+        "Task management with filtering, pagination, tagging, priorities, and status tracking",
+        "Kanban board with drag and drop, organised by project",
+        "Analytics dashboard with priority distribution and task status charts, built with Recharts",
         "Reusable Server Actions with a centralised ActionResult type and Zod validation"
       ],
       "challengesTradeoffs": [
-        "Migrating incrementally from React Query and Axios to Server Actions without breaking existing features",
-        "Designing a scalable actions architecture, splitting monolithic files into co-located per-action modules with tests",
-        "Balancing server-side simplicity with client interactivity by using the 'use client' boundary carefully",
+        "Migrating incrementally from React Query and Axios to Server Actions without breaking existing product behaviour",
+        "Designing a scalable actions architecture by splitting monolithic files into co-located, independently tested modules",
+        "Balancing server-side simplicity with interactive client behaviour by defining the 'use client' boundary carefully",
         "Maintaining architectural consistency in a long-running project that evolves through separate development cycles"
       ],
+      "whatILearned": [
+        "Incremental migrations are easier to validate and recover from than rewriting an entire application at once",
+        "Server-first architecture removes a lot of client-side complexity once data ownership and mutation boundaries are clearly defined",
+        "Authentication is more than a login screen: data isolation, rate limiting, password recovery, and route protection all need to work together",
+        "A consistent action result contract improves both developer experience and the quality of user-facing error feedback",
+        "A long-running project needs explicit architectural conventions so it can evolve without accumulating disconnected patterns"
+      ],
       "nextSteps": [
-        "Explore SaaS foundations: multi-user workspaces and billing"
+        "Explore SaaS foundations through multi-user workspaces and billing",
+        "Add end-to-end test coverage with Playwright"
       ]
     }
   },
@@ -77,35 +95,52 @@
       "liveDemo": "https://ps-redirect-lab.vercel.app"
     },
     "caseStudy": {
-      "projectOverview": "Redirect Lab is a full-stack link management platform built with an independent React client and Fastify API. It evolved from an earlier project and was rebuilt with a new identity, independently deployable repositories, stronger accessibility and testing practices, and a cost-conscious cloud architecture. The goal was to turn a basic URL shortener into a maintainable portfolio product with a focused user experience, reliable state handling, automated quality checks, and infrastructure that can run at little or no cost.",
+      "projectOverview": "Redirect Lab started as a postgraduate assignment: a URL shortener called Brev.ly, built to explore full-stack development end to end. When I looked at it again for my portfolio, the assignment was done, but the project itself wasn't finished. I rebuilt it as an independent React client and Fastify API, each deployable on its own, with automated accessibility checks, stronger testing practices, and a cost-conscious cloud architecture designed to run for little or no cost.",
       "techStack": [
-        "React 19", "TypeScript", "Vite", "Tailwind CSS",
-        "TanStack Query", "Zod", "Fastify", "PostgreSQL",
-        "Drizzle ORM", "Vitest", "Cloudflare R2"
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "TanStack Query",
+        "Zod",
+        "Fastify",
+        "PostgreSQL",
+        "Drizzle ORM",
+        "Vitest",
+        "Cloudflare R2"
       ],
       "whyThisStack": [
         "React and TanStack Query provide a focused client architecture with explicit server-state caching, mutation feedback, and paginated data loading",
-        "Fastify and Drizzle ORM create a lightweight, type-safe API and persistence layer that stays aligned with the TypeScript domain model",
-        "Vitest, Testing Library, and axe-core support fast behavioral and accessibility testing without adding external testing services",
-        "Vercel, Railway, Neon, and Cloudflare R2 provide independently deployable infrastructure with practical free or low-cost tiers"
+        "Fastify and Drizzle ORM create a lightweight, type-safe API and persistence layer aligned with the TypeScript domain model",
+        "Zod provides predictable validation at application boundaries and prevents invalid data from moving between the client and API",
+        "Vitest, Testing Library, and axe-core support behavioural and accessibility testing without relying on external testing services",
+        "Vercel, Railway, Neon, and Cloudflare R2 allow the client, API, database, and generated files to be deployed independently using practical free or low-cost tiers"
       ],
       "keyFeatures": [
         "Custom short URL creation with validation and duplicate prevention",
-        "Cross-tab access count synchronisation through BroadcastChannel, without additional real-time infrastructure",
+        "Access tracking with cross-tab count synchronisation through BroadcastChannel",
         "Paginated link loading with infinite scrolling and IntersectionObserver",
         "CSV export stored on Cloudflare R2 and delivered through a public URL",
-        "Accessible forms, dialogs, controls, and focus states, with automated axe checks",
+        "Accessible forms, dialogs, controls, keyboard interactions, and focus states with automated axe checks",
         "Responsive dark and light themes"
       ],
       "challengesTradeoffs": [
-        "Separating the original monorepo while preserving history and letting the client and API evolve independently",
-        "Replacing the original AWS delivery setup with lower-cost services without losing deployment reliability",
-        "Keeping access counts synchronised across tabs without adding WebSockets or an external real-time service",
-        "Protecting delivery scope by postponing authentication and advanced analytics until the core product was stable"
+        "Separating the original monorepo while preserving its history and allowing the client and API to evolve independently",
+        "Replacing the original AWS delivery setup with lower-cost services without sacrificing deployment reliability",
+        "Keeping access counts synchronised across browser tabs without adding WebSockets or an external real-time service",
+        "Balancing useful product features with a focused scope by postponing authentication and advanced analytics",
+        "Improving the original architecture without losing the simplicity expected from a focused link management product"
+      ],
+      "whatILearned": [
+        "A course assignment can become a maintainable product when its original constraints are reassessed instead of carried forward automatically",
+        "Separating the frontend and API improves deployment independence but requires clearer contracts and validation between applications",
+        "Reliable server-state handling depends on planned cache invalidation, mutation feedback, and loading states",
+        "Accessibility is more effective when treated as part of interaction design and continuously checked through automated tests",
+        "Operating cost is an architectural constraint that can guide simpler and more appropriate infrastructure decisions"
       ],
       "nextSteps": [
-        "Build an access analytics dashboard with clicks grouped by period",
-        "Add QR Code generation and PNG download"
+        "Explore an access analytics dashboard with clicks grouped by period",
+        "Consider QR code generation and PNG download as future product extensions"
       ]
     }
   },
@@ -123,30 +158,32 @@
       { "icon": "SiTypescript", "name": "TypeScript" },
       { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
       { "icon": "SiPrisma", "name": "Prisma" },
-      { "icon": "SiPostgresql", "name": "PostgreSQL" }
+      { "icon": "SiPostgresql", "name": "PostgreSQL" },
+      { "icon": "SiZod", "name": "Zod" }
     ],
     "links": {
       "github": "https://github.com/patriciasegantine/nextjs-auth-starter-site",
-       "liveDemo": "https://ps-nextjs-auth-starter.vercel.app"
+      "liveDemo": "https://ps-nextjs-auth-starter.vercel.app"
     },
     "caseStudy": {
-      "projectOverview": "Auth Starter is a reusable authentication foundation for Next.js applications. It was created after noticing that authentication, database configuration, protected routes, social login, and password recovery required similar setup across many small projects. The project separates the reusable template from its public website, documentation, and future live demo.",
-      "problemPurpose": "Repeatedly rebuilding authentication infrastructure was slowing down the start of new product experiments. The goal is to provide a secure, understandable, and reusable foundation that lets new projects begin closer to the product logic.",
-      "myFocus": [
-        "Designing a reusable architecture without product-specific assumptions",
-        "Keeping the template separate from marketing and documentation code",
-        "Choosing current stable technologies and sensible security defaults",
-        "Creating a setup that remains understandable for developers without deep backend experience"
-      ],
+      "projectOverview": "I kept rebuilding the same authentication setup at the start of every new project: users, sessions, protected routes, password recovery. Auth Starter exists to remove that repetition. Authentication, database integration, OAuth, and password recovery often require the same decisions before product work can even begin. The project separates those responsibilities into two repositories: a clean template intended to be copied and adapted, and a public website responsible for documentation, presentation, and the future live demo.",
       "techStack": [
-        "Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4",
-        "Better Auth", "Prisma 7", "PostgreSQL", "Resend"
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "Better Auth",
+        "Prisma 7",
+        "PostgreSQL",
+        "Zod",
+        "Nodemailer"
       ],
       "whyThisStack": [
         "Next.js App Router provides server-rendered routes, Route Handlers, and a clear boundary between public and protected application areas",
         "Better Auth offers a stable modern API for credentials, OAuth, sessions, and password recovery",
         "Prisma and PostgreSQL provide type-safe relational persistence that can be reused across different products",
-        "Resend provides a focused transactional email integration for password recovery",
+        "Zod provides predictable validation at application boundaries, keeping configuration and inputs explicit",
+        "Nodemailer provides provider-independent SMTP delivery for password recovery emails",
         "Separating the site and template repositories prevents generated projects from inheriting portfolio and documentation code"
       ],
       "keyFeatures": [
@@ -154,9 +191,9 @@
         "Optional Google OAuth configuration",
         "Server-validated protected routes",
         "PostgreSQL persistence through Prisma",
-        "Password recovery flow with transactional email support",
+        "Password recovery flow with SMTP email delivery through Nodemailer",
         "Separate public site and clean template repositories",
-        "Adaptive visual identity and favicon for light and dark browser themes"
+        "Public project site with an adaptive visual identity and favicon for light and dark browser themes"
       ],
       "challengesTradeoffs": [
         "Defining what belongs to the reusable template and what belongs only to the public demonstration site",
@@ -166,7 +203,7 @@
       ],
       "whatILearned": [
         "Reusable foundations require stricter separation of responsibilities than product-specific applications",
-        "Documentation should follow a validated implementation instead of defining behavior too early",
+        "Documentation should follow a validated implementation instead of defining behaviour too early",
         "A template repository and an installable package solve different problems",
         "Version stability is an important architectural consideration for reusable developer tooling"
       ],

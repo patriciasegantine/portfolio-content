@@ -151,7 +151,7 @@
     "description": "Reusable Next.js authentication foundation created to remove repetitive setup from new projects. Split into a clean template and a public documentation and demo site.",
     "image": "https://raw.githubusercontent.com/patriciasegantine/nextjs-auth-starter-site/main/public/preview.png",
     "stackPreview": ["Next.js", "TypeScript", "Better Auth", "Prisma"],
-    "status": "In Progress",
+    "status": "Completed",
     "featured": true,
     "technologies": [
       { "icon": "SiNextdotjs", "name": "Next.js" },
@@ -186,12 +186,14 @@
         "Nodemailer provides provider-independent SMTP delivery for password recovery emails",
         "Separating the site and template repositories prevents generated projects from inheriting portfolio and documentation code"
       ],
-      "keyFeatures": [
+     "keyFeatures": [
         "Reusable email and password authentication flow",
         "Optional Google OAuth configuration",
         "Server-validated protected routes",
         "PostgreSQL persistence through Prisma",
         "Password recovery flow with SMTP email delivery through Nodemailer",
+        "Per-route rate limiting persisted in Postgres, safe for stateless serverless functions",
+        "Automated unit and integration test suite with CI",
         "Separate public site and clean template repositories",
         "Public project site with an adaptive visual identity and favicon for light and dark browser themes"
       ],
@@ -208,9 +210,8 @@
         "Version stability is an important architectural consideration for reusable developer tooling"
       ],
       "nextSteps": [
-        "Finish and validate the template against a clean PostgreSQL database",
-        "Test credentials, Google OAuth, password recovery, and protected routes end to end",
-        "Publish the documentation and live demo site",
+        "Evaluate adding Google OAuth and end-to-end browser test coverage",
+        "Disconnect unused infrastructure (Railway) and verify production environment variables",
         "Evaluate a future create-nextjs-auth-starter CLI after using the template in real projects"
       ]
     }

@@ -79,7 +79,7 @@
     "stackPreview": ["React", "TypeScript", "Fastify", "PostgreSQL"],
     "status": "Completed",
     "featured": true,
-    "featuredOrder": 1
+    "featuredOrder": 1,
     "technologies": [
       { "icon": "SiReact", "name": "React" },
       { "icon": "SiTypescript", "name": "TypeScript" },

@@ -8,6 +8,7 @@
     "stackPreview": ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
     "status": "Ongoing",
     "featured": true,
+    "featuredOrder": 2,
     "technologies": [
       { "icon": "SiNextdotjs", "name": "Next.js" },
       { "icon": "SiTypescript", "name": "TypeScript" },
@@ -78,6 +79,7 @@
     "stackPreview": ["React", "TypeScript", "Fastify", "PostgreSQL"],
     "status": "Completed",
     "featured": true,
+    "featuredOrder": 1
     "technologies": [
       { "icon": "SiReact", "name": "React" },
       { "icon": "SiTypescript", "name": "TypeScript" },
@@ -153,6 +155,7 @@
     "stackPreview": ["Next.js", "TypeScript", "Better Auth", "Prisma"],
     "status": "Completed",
     "featured": true,
+    "featuredOrder": 3,
     "technologies": [
       { "icon": "SiNextdotjs", "name": "Next.js" },
       { "icon": "SiTypescript", "name": "TypeScript" },
@@ -215,5 +218,80 @@
         "Evaluate a future create-nextjs-auth-starter CLI after using the template in real projects"
       ]
     }
+  },
+  {
+  "slug": "the-no-manual-life",
+  "title": "The No-Manual Life",
+  "category": "Accessibility & Inclusive Design",
+  "description": "Accessibility-first blog built with Next.js and TypeScript. Explores semantic HTML, keyboard navigation, focus management, inclusive interaction patterns, and WCAG-aligned frontend architecture.",
+  "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/public/assets/images/blog.png",
+  "stackPreview": ["Next.js", "TypeScript", "Tailwind CSS", "Radix UI"],
+  "status": "Paused",
+  "featured": false,
+  "featuredOrder": null,
+  "technologies": [
+    { "icon": "SiNextdotjs", "name": "Next.js" },
+    { "icon": "SiTypescript", "name": "TypeScript" },
+    { "icon": "SiTailwindcss", "name": "Tailwind CSS" },
+    { "icon": "SiReact", "name": "React" },
+    { "icon": "SiRadixui", "name": "Radix UI" },
+    { "icon": "SiAxe", "name": "Axe Core" }
+  ],
+  "links": {
+    "github": "https://github.com/patriciasegantine/a11y-blog-project",
+    "liveDemo": "https://the-no-manual-life-blog.vercel.app"
+  },
+  "caseStudy": {
+    "projectOverview": "The No-Manual Life began as a blog about identity, work, mental health, and personal growth, but its main engineering purpose is to explore what changes when accessibility becomes an architectural constraint rather than a final checklist. The application acts as an iterative laboratory for semantic structure, keyboard interaction, focus behaviour, readable content, and accessible component design. Each development phase strengthens a different part of the frontend, from inclusive interaction foundations to content architecture and performance. The project is deliberately evolving over time, allowing new features to be introduced without losing the accessibility principles established at its foundation.",
+    "techStack": [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "Radix UI",
+      "Axe Core",
+      "Font Awesome",
+      "Vercel"
+    ],
+    "whyThisStack": [
+      "Next.js App Router provides semantic route-based layouts, Server Components, metadata support, loading states, error boundaries, and configurable content revalidation",
+      "TypeScript defines explicit contracts for posts, categories, and navigation, making the content and component architecture safer to evolve",
+      "Tailwind CSS supports responsive layouts, visible focus states, readable spacing, and consistent light and dark colour variants close to the components that use them",
+      "Radix UI supplies accessible foundations for interactive patterns such as dialogs, accordions, and form controls",
+      "Axe Core provides automated accessibility checks during development and complements manual keyboard and screen-reader testing"
+    ],
+    "keyFeatures": [
+      "Semantic page structure using landmarks, headings, articles, navigation regions, and descriptive content",
+      "Keyboard-accessible navigation with visible high-contrast focus states and a logical tab order",
+      "Accessibility introduction dialog explaining the project's inclusive design principles and keyboard controls",
+      "Responsive post browsing with featured, recent, most-read, and category-based content",
+      "Dynamic post routes with dedicated loading, error, and not-found states",
+      "Server-only content access layer with typed queries for posts, categories, tags, and featured content",
+      "Cached posts API prepared for future search, filtering, and pagination features",
+      "Descriptive alternative text and image attribution integrated into the content model"
+    ],
+    "challengesTradeoffs": [
+      "Treating accessibility as a system-wide responsibility across layout, navigation, content, and interactive components instead of isolating it within individual controls",
+      "Balancing custom visual design with predictable native semantics and restrained ARIA usage",
+      "Designing keyboard and focus behaviour that remains consistent across desktop navigation, mobile navigation, dialogs, and accordions",
+      "Building an intentionally incremental product while keeping planned functionality separate from features that are already complete",
+      "Using a local typed content source for simplicity while preparing boundaries that can later support MDX or a headless CMS"
+    ],
+    "whatILearned": [
+      "Accessibility decisions are easier and more reliable when they shape component architecture from the beginning",
+      "Semantic HTML and native browser behaviour often provide a stronger foundation than adding ARIA after an interaction has already been designed",
+      "Keyboard navigation must be evaluated as a complete user journey rather than as a collection of individually focusable elements",
+      "Automated accessibility checks are valuable, but they do not replace manual keyboard, screen-reader, focus-order, and contrast testing",
+      "Explicit loading, error, empty, and not-found states contribute to accessibility by making application behaviour more understandable and predictable",
+      "An incremental roadmap helps preserve engineering quality by separating foundational work from optional product enhancements"
+    ],
+    "nextSteps": [
+      "Complete accessible contact form submission with robust validation and success and error feedback",
+      "Add search and filtering by category and tag",
+      "Refine theme preferences, contrast consistency, focus management, and reduced-motion support",
+      "Introduce slug-based routing, structured metadata, and a scalable MDX or CMS-backed content source",
+      "Define performance budgets and add Web Vitals monitoring"
+    ]
   }
+}
 ]

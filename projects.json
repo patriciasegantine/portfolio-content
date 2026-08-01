@@ -224,9 +224,9 @@
   "title": "The No-Manual Life",
   "category": "Accessibility & Inclusive Design",
   "description": "Accessibility-first blog built with Next.js and TypeScript. Explores semantic HTML, keyboard navigation, focus management, inclusive interaction patterns, and WCAG-aligned frontend architecture.",
-  "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/public/assets/images/blog.png",
+  "image": "https://raw.githubusercontent.com/patriciasegantine/a11y-blog-project/main/public/preview.png",
   "stackPreview": ["Next.js", "TypeScript", "Tailwind CSS", "Radix UI"],
-  "status": "Paused",
+  "status": "InProgress",
   "featured": false,
   "featuredOrder": null,
   "technologies": [
